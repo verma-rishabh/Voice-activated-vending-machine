@@ -1,0 +1,107 @@
+/*
+ * GPIO servo output example
+ */
+
+/////////////////////////
+// INCLUDE STATEMENTS //
+///////////////////////
+
+// System calls
+#include <unistd.h>
+// Input/output streams and functions
+#include <iostream>
+#include "mqtthelper.h"
+// Interfaces with GPIO
+#include "matrix_hal/gpio_control.h"
+// Communicates with MATRIX device
+#include "matrix_hal/matrixio_bus.h"
+
+////////////////////////
+// INITIAL VARIABLES //
+//////////////////////
+
+char ADDRESS[] = "localhost:1883";
+char CLIENTID[] = "motors";
+char TOPIC[] = "motors";
+int QOS =  0;
+// GPIOOutputMode is 1
+const uint16_t GPIOOutputMode = 1;
+// GPIOInputMode is 0
+const uint16_t GPIOInputMode = 0;
+
+// Holds desired GPIO pin for output [0-15]
+uint16_t motor1_pin = 1;
+// Holds desired output state
+uint16_t motor2_pin = 2;
+// Holds desired GPIO pin for input [0-15]
+
+
+
+int main() {
+    ////////////////////
+    // INITIAL SETUP //
+    //////////////////
+
+    // Create MatrixIOBus object for hardware communication
+    matrix_hal::MatrixIOBus bus;
+    // Initialize bus and exit program if error occurs
+    if (!bus.Init()) return false;
+
+    /////////////////
+    // MAIN SETUP //
+    ///////////////
+
+    // Create GPIOControl object
+    matrix_hal::GPIOControl gpio;
+    // Set gpio to use MatrixIOBus bus
+    gpio.Setup(&bus);
+
+    // Prompt user for GPIO pin
+
+    // Set pin_out mode to output
+    gpio.SetMode(motor1_pin, GPIOOutputMode);
+    gpio.SetMode(motor2_pin, GPIOOutputMode);
+
+
+
+    // Set pin_out to output pin_out_state
+    gpio.SetGPIOValue(motor1_pin, 1);
+    gpio.SetGPIOValue(motor2_pin, 1);
+
+
+    initMqtt(ADDRESS,CLIENTID,TOPIC,QOS);
+    // Endless loop
+    while (true) {
+      if (msg !=0){
+        std::cout<<"[Vending Machine]: Running mortors";
+        if (msg == 1){
+            
+            gpio.SetGPIOValue(motor1_pin, 0);
+	    usleep(300000);
+            gpio.SetGPIOValue(motor1_pin, 1);
+            gpio.SetGPIOValue(motor2_pin, 0);
+            usleep(1000000);
+            gpio.SetGPIOValue(motor2_pin, 1); 
+
+        
+        }
+        if (msg == 2){
+            
+            gpio.SetGPIOValue(motor1_pin, 0);
+	    usleep(300000);
+            gpio.SetGPIOValue(motor1_pin, 1);
+            gpio.SetGPIOValue(motor2_pin, 0);
+            usleep(1000000);
+            gpio.SetGPIOValue(motor2_pin, 1);            
+        }
+        
+        msg = 0;
+      }
+
+
+      // Sleep for 10000 microseconds
+        usleep(10000);
+    }
+
+    return 0;
+}

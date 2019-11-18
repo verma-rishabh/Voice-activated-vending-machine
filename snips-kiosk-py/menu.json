@@ -1,0 +1,112 @@
+{
+  "Burgers":[{
+    "Hawaiian Burger":{
+      "price":7.00,
+      "ingredients": "Potato, cheese, bread, mayonnaise, honey, pineapple, butter, beef, dairy products"
+    },
+    "Burger":{
+      "price":8.00,
+      "ingredients": "Potato, cheese, bread, butter, beef, dairy products"
+    },
+    "Chicken Burger":{
+      "price":5.00,
+      "ingredients": "Potato, cheese, bread, butter, chicken, dairy products"
+    },
+    "Fish Burger":{
+      "price":5.00,
+      "ingredients": "Potato, cheese, bread, butter, Fish, dairy products"
+    },
+    "Double Cheese Burger":{
+      "price":5.00,
+      "ingredients": "Potato, cheese, bread, butter, dairy products"
+    },
+    "Mexican Burger":{
+      "price":5.00,
+      "ingredients": "Potato, cheese, bread, butter, chicken, dairy products"
+    },
+    "Veggie Burger":{
+      "price":5.00,
+      "ingredients": "Potato, cheese, bread, butter"
+    }
+  }],
+  "Pizzas":[{
+    "Margarita pizza":{
+      "price":4.00,
+      "ingredients": "cheese, bread,cheese, butter, dairy products"
+    },
+    "4 cheeses pizza":{
+      "price":4.00,
+      "ingredients": "cheese, bread, butter, beef, dairy products"
+    },
+    "pepperoni pizza":{
+      "price":7.00,
+      "ingredients": "pepperoni, cheese, bread,chicken, dairy products"
+    },
+    "Veggie lover pizza":{
+      "price":9.00,
+      "ingredients": "Veggie, cheese, bread, butter, dairy products"
+    },
+    "Hawaiian Pizza":{
+      "price":8.00,
+      "ingredients": "Pineapple, cheese, bread, butter, dairy products, honey"
+    },
+    "Chorizo pizza":{
+      "price":6.50,
+      "ingredients": "Veggie, cheese, bread, butter, dairy products"
+    }
+
+  }],
+  "Extras":[{
+    "Fries":{
+      "price":2.00,
+      "ingredients": "cheese, dairy products, potatoes"
+    },
+    "pepper potatoes":{
+      "price":7.00,
+      "ingredients": "cheese, butter, dairy products, potatoes"
+    },
+    "mexican eggroll":{
+      "price":7.00,
+      "ingredients": "pepperoni, cheese, egg, dairy products"
+    },
+    "Mixed stir fry":{
+      "price":7.00,
+      "ingredients": "Veggie, cheese, butter, dairy products"
+    },
+    "greek Salad":{
+      "price":5.00,
+      "ingredients": "Veggie, cheese, dairy products, honey"
+    }
+  }],
+  "Drinks":[{
+    "Coke":{
+      "price":2.00,
+      "ingredients": "carbonated drinks"
+    },
+    "Mountain Dew":{
+      "price":2.00,
+      "ingredients": "carbonated drinks"
+    },
+    "bottled water":{
+      "price":1.50,
+      "ingredients": "water"
+    },
+    "Beer":{
+      "price":2.00,
+      "ingredients": "beer"
+    },
+    "Tea":{
+      "price":1.50,
+      "ingredients": "dairy products, sugar"
+    },
+    "Coffee":{
+      "price":1.50,
+      "ingredients": "milk, dairy products, cofee,sugar"
+    },
+    "Chocolate milk shake":{
+      "price":1.75,
+      "ingredients": "milk, dairy products, chocolate,sugar"
+    }
+  }]
+
+}

@@ -1,0 +1,10 @@
+[global]
+gpio_bcm_relay=12
+activate_level=high
+house_room=
+device_name=relay
+
+[secret]
+mqtt_host=localhost
+mqtt_port=1883
+site_id=default

@@ -1,0 +1,29 @@
+[Menu.json]
+{
+  "Sections":{[
+    "Dishes":{
+      "price": 213
+      "description":[a,b,c]
+    }
+  ]}
+}
+
+
+[Customer.json]
+{
+  name:
+  pic address:
+  allergies:[]
+  last order:{[
+    item:
+    quantity:
+  ]}
+  Special request:{[
+    menu item : "special request"
+  ]}
+}
+
+
+[orders.csv]
+
+time_stamp  order_ID  Customer_name item  quantity
